@@ -1,0 +1,117 @@
+main {
+}
+section {
+  position: relative;
+  .container {
+    max-width: 1400px;
+  }
+}
+
+.main_title {
+  position: relative;
+  width: 100%;
+  height: 910px;
+  background-image: url("../img/main/img_visual01.png");
+  background-attachment: fixed;
+  background-size: cover;
+  &__text {
+    position: absolute;
+    top: 230px;
+    left: 14%;
+    text-align: left;
+    h2 {
+      position: relative;
+      color: #fff;
+      font-size: 70px;
+      font-family: "NotoSansMedium";
+      line-height: 1.1;
+    }
+    p {
+      color: #fff;
+      font-size: 21px;
+      margin-top: 42px;
+    }
+  }
+  &__btn {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    .btn-scroll {
+      width: 33px;
+      height: 33px;
+      background-position: -122px 0;
+    }
+  }
+}
+.main_business {
+  background: #f8f8f8;
+  &__title {
+    h2 {
+      position: relative;
+      padding-bottom: 22px;
+      color: #111;
+      font-family: "NotoSansBold";
+      font-size: 44px;
+      padding-top: 100px;
+      text-align: center;
+    }
+    p {
+      margin-top: 25px;
+      text-align: center;
+    }
+  }
+  &__list {
+    padding-bottom: 133px;
+    ul {
+      display: table;
+      width: 1200px;
+      margin: 70px auto 0;
+      li {
+        display: inline-block;
+      }
+      a {
+        position: relative;
+        display: inline-block;
+        transition: all 0.2s linear;
+        p {
+          text-align: center;
+          color: #fff;
+          font-size: 24px;
+          padding-top: 98px;
+        }
+      }
+      .list_img {
+        width: 240px;
+        height: 420px;
+        background: url(../img/main/img_business.png) no-repeat;
+      }
+      .list_img_hover {
+      }
+      .list1 {
+        .list_img {
+          background-position: 0px 0px;
+        }
+      }
+      .list2 {
+        .list_img {
+          background-position: -240px 0px;
+        }
+      }
+      .list3 {
+        .list_img {
+          background-position: -480px 0px;
+        }
+      }
+      .list4 {
+        .list_img {
+          background-position: -720px 0px;
+        }
+      }
+      .list5 {
+        .list_img {
+          background-position: -960px 0px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+.btn-scroll {
+  display: inline-block;
+  background: url(../img/main/bg_common.png) no-repeat;
+  vertical-align: middle;
+  font-size: 0;
+}

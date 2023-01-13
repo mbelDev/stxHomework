@@ -1,0 +1,45 @@
+.header {
+  .header_default {
+    position: relative;
+    width: 100%;
+    max-width: 1859px;
+    margin: 0 auto;
+    height: 80px;
+    z-index: 99;
+    &__header-left {
+      .logo-header {
+        position: absolute;
+        left: 25px;
+        top: 0px;
+        a {
+          margin-top: 20px;
+          display: block;
+          width: 217px;
+          height: 36px;
+          background: url(../images/common/smstxconst_logo.png) no-repeat;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  background: #4e4e4e;
+  height: 168px;
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 50px;
+  }
+  &__logo {
+    width: 122px;
+    height: 28px;
+    background: url(../img/icons/logo_footer.png) no-repeat bottom;
+  }
+  &__info {
+    color: #c3c3c3;
+    font-size: 13px;
+    padding-left: 135px;
+    line-height: 1.8;
+  }
+}
