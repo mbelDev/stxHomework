@@ -35,3 +35,16 @@ const btnScroll = document.querySelector(".btn-scroll");
 btnScroll.addEventListener("click", function () {
   window.scrollTo(0, 1000);
 });
+
+const btnENG = document.querySelector(".btnENG");
+const btnKOR = document.querySelector(".btnKOR");
+btnENG.addEventListener("click", function (e) {
+  e.preventDefault();
+  btnENG.classList.add("on");
+  btnKOR.classList.remove("on");
+});
+btnKOR.addEventListener("click", function (e) {
+  e.preventDefault();
+  btnENG.classList.remove("on");
+  btnKOR.classList.add("on");
+});
