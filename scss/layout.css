@@ -1,11 +1,18 @@
+.header.onScroll .header_default {
+  top: -80px;
+  transition: all 300ms;
+}
 .header .header_default {
   display: flex;
+  top: 0px;
   justify-content: center;
-  position: relative;
+  position: fixed;
   width: 100%;
+  background: #fff;
   margin: 0 auto;
   height: 80px;
   z-index: 99;
+  transition: all 300ms;
 }
 .header .header_default__header-left {
   position: absolute;

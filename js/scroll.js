@@ -1,3 +1,4 @@
+const scrollHead = document.querySelector(".header");
 let lastScrollY = 0;
 
 addEventListener("scroll", (e) => {
@@ -9,7 +10,14 @@ addEventListener("scroll", (e) => {
   // 현재의 스크롤 값을 저장
   lastScrollY = scrollY;
 
-  console.log(direction);
+  if (direction == "Scroll Up") {
+    scrollHead.classList.remove("onScroll");
+  } else {
+    if (scrollY >= 100) {
+      scrollHead.classList.add("onScroll");
+      gnb.classList.remove("on");
+    }
+  }
 });
 
 const gnb = document.querySelector(".header_default__header-center");
