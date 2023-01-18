@@ -125,6 +125,7 @@
 }
 
 .footer {
+  position: relative;
   background: #4e4e4e;
   height: 168px;
 }

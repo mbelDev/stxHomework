@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="../css/common.css" />
     <link rel="stylesheet" href="../css/layout.css" />
     <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/splitting.css" />
+    <link rel="stylesheet" href="../css/swiper.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script src="../js/splitting.min.js"></script>
+    <script src="../js/gsap/gsap.min.js"></script>
+    <script src="../js/gsap/ScrollTrigger.min.js"></script>
+    <script src="../js/swiper.js"></script>
     <title>STX건설</title>
   </head>
   <body>
@@ -104,9 +111,24 @@
     </header>
     <main class="main">
       <section class="main_title">
+        <div class="main_title__visual Swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide item1">Slide 1</div>
+            <div class="swiper-slide item2">Slide 2</div>
+            <div class="swiper-slide item3">Slide 3</div>
+            <div class="swiper-slide item4">Slide 4</div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination main_title__pagination pagination">
+            <div class="main_title__pagination-box pagination-box"></div>
+            <button class="btn btn-pause"></button>
+          </div>
+        </div>
         <div class="container">
           <div class="main_title__text">
-            <h2>
+            <h2 data-splitting>
               BEST OF THE WORLD <br />
               STX Engineering & Construction
             </h2>
@@ -122,10 +144,8 @@
           <div class="main_business__title">
             <h2>STX Engineering & Construction Business</h2>
             <p>
-              STX건설은 건문 역량 강화를 통해 건축, 주택, 토목, 플랜트 사업
-              영역에서 <br />
-              탁월한 성과를 인정받은 기업으로 자연과 기술의 공간에 인류의 가치를
-              추구합니다.
+              STX건설은 건문 역량 강화를 통해 건축, 주택, 토목, 플랜트 사업 영역에서 <br />
+              탁월한 성과를 인정받은 기업으로 자연과 기술의 공간에 인류의 가치를 추구합니다.
             </p>
           </div>
           <div class="main_business__list">
@@ -177,18 +197,14 @@
                 <h2>공지사항</h2>
                 <li>
                   <a href="">
-                    <p>
-                      <span>사무실 이전 안내</span
-                      ><span class="btn-more"></span>
-                    </p>
+                    <p><span>사무실 이전 안내</span><span class="btn-more"></span></p>
                   </a>
                 </li>
                 <li>
                   <a href="">
                     <p>
                       <span
-                        >에스티엑스건설자산관리 주식회사 해산결의에 따른
-                        채권신고 안내 공고 (2차)
+                        >에스티엑스건설자산관리 주식회사 해산결의에 따른 채권신고 안내 공고 (2차)
                       </span>
                       <span class="btn-more"></span>
                     </p>
@@ -198,18 +214,15 @@
                   <a href="">
                     <p>
                       <span
-                        >에스티엑스건설자산관리 주식회사 해산결의에 따른
-                        채권신고 안내 공고 (1차)</span
+                        >에스티엑스건설자산관리 주식회사 해산결의에 따른 채권신고 안내 공고
+                        (1차)</span
                       ><span class="btn-more"></span>
                     </p>
                   </a>
                 </li>
                 <li>
                   <a href="">
-                    <p>
-                      <span>2021년도 협력업체 모집공고</span
-                      ><span class="btn-more"></span>
-                    </p>
+                    <p><span>2021년도 협력업체 모집공고</span><span class="btn-more"></span></p>
                   </a>
                 </li>
               </ul>
@@ -221,9 +234,7 @@
                 <h2>NEWS</h2>
                 <li>
                   <a href="">
-                    <p>
-                      <span>회생절차 종료</span><span class="btn-more"></span>
-                    </p>
+                    <p><span>회생절차 종료</span><span class="btn-more"></span></p>
                   </a>
                 </li>
                 <li>
@@ -236,10 +247,7 @@
                 </li>
                 <li>
                   <a href="">
-                    <p>
-                      <span>STX건설, 2018년 성장 '청신호'</span
-                      ><span class="btn-more"></span>
-                    </p>
+                    <p><span>STX건설, 2018년 성장 '청신호'</span><span class="btn-more"></span></p>
                   </a>
                 </li>
               </ul>
@@ -287,8 +295,7 @@
                     STX건설 이름으로 세계 어디에서, 시계 누구와 겨뤄도 <br />
                     자신 있는 세계 최고를 향해 웅비합니다. STX건설이라는 날개를
                     <br />
-                    하나 더 피고 세계로, 미래로 나아가는 STX건설의 힘찬 비상을
-                    주목해 <br />
+                    하나 더 피고 세계로, 미래로 나아가는 STX건설의 힘찬 비상을 주목해 <br />
                     주십시오.
                   </p>
                 </div>
@@ -324,15 +331,69 @@
         </div>
         <div class="footer__info">
           <address>
-            부산사무소 : (48938) 부산광역시 중구 충장대로5번길 22 (중앙동4가)
-            SM상선빌딩 7층 TEL : 051-791-3000 · FAX : 051-791-3099
-            <br />창원사무소 : (51494) 경상남도 창원시 성산구 중앙대로 84번길 3,
-            9층904호 · TEL : 055-263-2060
+            부산사무소 : (48938) 부산광역시 중구 충장대로5번길 22 (중앙동4가) SM상선빌딩 7층 TEL :
+            051-791-3000 · FAX : 051-791-3099
+            <br />창원사무소 : (51494) 경상남도 창원시 성산구 중앙대로 84번길 3, 9층904호 · TEL :
+            055-263-2060
           </address>
           <p>Copyright ⓒ 2018 STX CONSTRUCTION. LTD. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
     <script src="../js/scroll.js"></script>
+    <script>
+      Splitting();
+    </script>
+    <script>
+      //btn--scroll
+      const btnPause = document.querySelector(".btn-pause");
+      btnPause.addEventListener("click", function () {
+        if (swiper.autoplay.paused) {
+          swiper.autoplay.run();
+          btnPause.classList.remove("off");
+        } else {
+          swiper.autoplay.pause();
+          btnPause.classList.add("off");
+        }
+      });
+      //gsap
+      gsap.from(".char", { y: 300, color: "#00ff00", duration: 2, stagger: 0.02 });
+      gsap.to(".char", {
+        x: 400,
+        rotation: 360,
+
+        scrollTrigger: {
+          trigger: ".char",
+          start: "250px 85%",
+          end: "top 200px",
+          scrub: true,
+          markers: false,
+          id: "scrub",
+        },
+      });
+      //swiper
+
+      var swiper = new Swiper(".Swiper", {
+        slidesPerView: 1, // 한 슬라이드에 보여줄 갯수
+        centeredSlides: true, //센터모드
+        effect: "cube",
+        speed: 1000,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        loop: true, // 슬라이드 반복 여부
+
+        loopAdditionalSlides: 1,
+
+        // 슬라이드 반복 시 마지막 슬라이드에서 다음 슬라이드가 보여지지 않는 현상 수정
+        pagination: {
+          // 호출(pager) 여부
+          el: ".main_title__pagination-box", //버튼을 담을 태그 설정
+          clickable: true, // 버튼 클릭 여부
+          type: "bullets",
+        },
+      });
+    </script>
   </body>
 </html>
